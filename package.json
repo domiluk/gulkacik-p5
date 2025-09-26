@@ -1,0 +1,23 @@
+{
+    "name": "gulkacik-p5",
+    "version": "1.0.0",
+    "description": "This is an attempt to rewrite an old C game, gulkacik, into p5.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "tsc --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/domiluk/gulkacik-p5.git"
+    },
+    "keywords": [],
+    "author": "",
+    "bugs": {
+        "url": "https://github.com/domiluk/gulkacik-p5/issues"
+    },
+    "homepage": "https://github.com/domiluk/gulkacik-p5#readme",
+    "devDependencies": {
+        "@types/p5": "^1.7.6",
+        "typescript": "^5.9.2"
+    }
+}
