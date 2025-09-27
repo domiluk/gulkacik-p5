@@ -1,0 +1,33 @@
+# Project: 02
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = ../03/delete/vge_private.res
+OBJ  = ../03/delete/main.o $(RES)
+LINKOBJ  = ../03/delete/main.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -lalgif -lalpng -ljpgal -lalfont -lalleg  -g3 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = GED.exe
+CXXFLAGS = $(CXXINCS)   -s -g3
+CFLAGS = $(INCS)   -s -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before GED.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "GED.exe" $(LIBS)
+
+../03/delete/main.o: main.cpp
+	$(CC) -c main.cpp -o ../03/delete/main.o $(CFLAGS)
+
+../03/delete/vge_private.res: vge_private.rc 
+	$(WINDRES) -i vge_private.rc --input-format=rc -o ../03/delete/vge_private.res -O coff 
