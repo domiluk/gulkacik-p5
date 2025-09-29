@@ -34,11 +34,11 @@ void darkness(BITMAP *bmp, int x1, int y1, int x2, int y2)
   if(g < 128)g = 128;
   if(b < 128)b = 128;
   putpixel(bmp, x, y, makecol(r-128, g-128, b-128));
- }     
+ }
 }
 
-
-BITMAP *mb1, *mb2;
+BITMAP *mb1,
+    *mb2;
 int q[10] = {3,3,3,3,3,3,3,3,3,3}, hlp;
 
 BITMAP *mb, *main_menu, *main_hra, *main_aut, *main_nast, *main_xko, *ps_pripojit;

@@ -6,11 +6,14 @@
         "outFile": "./build/build.js",
         "rootDir": "./sketch/",
         "sourceMap": true,
+        
         "strict": true,
-        "skipLibCheck": true,
+        "exactOptionalPropertyTypes": true,
+
         "noImplicitAny": true,
+        "noImplicitOverride": true,
         "preserveConstEnums": false,
-        "removeComments": true,
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        "removeComments": true
     }
 }
